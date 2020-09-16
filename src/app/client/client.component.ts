@@ -10,6 +10,8 @@ export class ClientComponent implements OnInit {
   
 @ViewChild('drawer', { static: true }) drawer: MatDrawer;
 
+clientName: string = '';
+
   constructor() { }
 
   ngOnInit() {

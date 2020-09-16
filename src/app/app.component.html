@@ -2,9 +2,9 @@
   <!-- ADHOST -->
   <ng-template ad-host></ng-template>
 </div>
-<button (click)="loadClient(1)" [class.loaded]="client1">
+<button (click)="loadClient(1)" [class.loaded]="loadComponent === 1" [class.minimice]="client1">
   Load client 1
 </button>
-<button (click)="loadClient(2)" [class.loaded]="client2">
+<button (click)="loadClient(2)" [class.loaded]="loadComponent === 1" [class.minimice]="client1">
   Load client 2
 </button>

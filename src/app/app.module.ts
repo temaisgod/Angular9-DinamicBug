@@ -50,6 +50,7 @@ import { ClientComponent } from './client/client.component'
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
   ],
+  entryComponents: [ClientComponent],
   imports: [
     BrowserModule, FormsModule,
     MatAutocompleteModule,
