@@ -1,4 +1,10 @@
 <div class="AdHostContainer">
-
+  <!-- ADHOST -->
+  <ng-template ad-host></ng-template>
 </div>
-butt
+<button (click)="loadClient(1)" [class.loaded]="client1">
+  Load client 1
+</button>
+<button (click)="loadClient(2)" [class.loaded]="client2">
+  Load client 2
+</button>

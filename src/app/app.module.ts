@@ -41,9 +41,10 @@ import {MatToolbarModule} from '@angular/material/toolbar';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatTreeModule} from '@angular/material/tree';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
+import { AdDirective } from './ad.directive';
 
 @NgModule({
-  declarations: [ AppComponent ],
+  declarations: [ AppComponent, AdDirective ],
   bootstrap:    [ AppComponent ],
   providers: [
     { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { appearance: 'fill' } },
