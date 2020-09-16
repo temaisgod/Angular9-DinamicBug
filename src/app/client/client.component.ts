@@ -10,7 +10,7 @@ import { trigger, state, transition, style, animate } from '@angular/animations'
     trigger('openAnimation', [
       state('show', style({ height: '*' })),
       state('hidden', style({ height: '0px' })),
-      transition('false <=> true', animate(500))
+      transition('show <=> hidden', animate(500))
     ])
   ],
 })
