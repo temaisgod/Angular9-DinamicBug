@@ -43,6 +43,7 @@ import {MatTreeModule} from '@angular/material/tree';
 import {MAT_FORM_FIELD_DEFAULT_OPTIONS} from '@angular/material/form-field';
 import { AdDirective } from './ad.directive';
 import { ClientComponent } from './client/client.component'
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 @NgModule({
   declarations: [ AppComponent, AdDirective, ClientComponent ],
@@ -52,6 +53,7 @@ import { ClientComponent } from './client/client.component'
   ],
   entryComponents: [ClientComponent],
   imports: [
+    BrowserAnimationsModule,
     BrowserModule, FormsModule,
     MatAutocompleteModule,
     MatBadgeModule,

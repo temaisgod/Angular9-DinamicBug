@@ -7,8 +7,13 @@
 
   <div class="example-sidenav-content">
     SIDENAVCONTENT
+
+    <div style="overflow: hidden" [@openAnimation]="this.showText ? 'show' : 'hidden'">
+      ANIMATIONTEXT
+    </div>
   </div>
 
 </mat-drawer-container>
 
 <button (click)="openSidenav()">TOOGLE SIDENAV</button>
+<button (click)="animate()">Animation text</button>

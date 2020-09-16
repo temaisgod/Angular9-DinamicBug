@@ -1,4 +1,4 @@
-import { Component, ViewChild, ComponentFactoryResolver, ViewRef } from '@angular/core';
+import { Component, ViewChild, ComponentFactoryResolver, ViewRef, ComponentRef } from '@angular/core';
 import {MatSelectModule} from '@angular/material/select';
 import { AdDirective } from './ad.directive';
 import { ClientComponent } from './client/client.component';
@@ -9,8 +9,8 @@ import { ClientComponent } from './client/client.component';
   styleUrls: [ './app.component.css' ]
 })
 export class AppComponent  {
-  client1: ViewRef;
-  client2: ViewRef;
+  client1: ComponentRef<ClientComponent>;
+  client2: ComponentRef<ClientComponent>;
   loadComponent: number = 0;
   _currentComponent: any;
 
@@ -32,11 +32,11 @@ export class AppComponent  {
       let viewRef = this.adHost.viewContainerRef.detach(0);
     }
 
-    let componentLoad = id === 1 ? this.client1 : this.client2;
+    let componentLoad: ComponentRef<ClientComponent> = id === 1 ? this.client1 : this.client2;
 
     if (componentLoad){
       // if the component has been loaded.
-      this.adHost.viewContainerRef.insert(componentLoad, 0);
+      this.adHost.viewContainerRef.insert(componentLoad.hostView, 0);
       this._currentComponent = componentLoad;
     }else{
       // if the component not has load. Instance it.

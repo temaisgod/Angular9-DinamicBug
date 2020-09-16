@@ -9,7 +9,7 @@ p {
 }
 
 .loaded{
-  background-color: greenyellow;
+  background-color: greenyellow !important;
 }
 
 .minimice{
