@@ -1,19 +1,24 @@
-{{clientName}}
+<div class="client-main-container">
+	<h3>{{clientName}}</h3>
+	<div class="btns">
+		<button (click)="openSidenav()">TOOGLE SIDENAV</button>
+		<button (click)="animate()">Animation text</button>
+	</div>
 
-<mat-drawer-container class="example-container">
-  <mat-drawer #drawer class="example-sidenav" mode="side">
-   SIDE
-  </mat-drawer>
+	<br/>
 
-  <div class="example-sidenav-content">
-    SIDENAVCONTENT
+	<mat-drawer-container class="example-container">
+		<mat-drawer #drawer class="example-sidenav" mode="side">
+			<p>SIDENAV</p>
+		</mat-drawer>
 
-    <div style="overflow: hidden" [@openAnimation]="this.showText ? 'show' : 'hidden'">
-      ANIMATIONTEXT
-    </div>
-  </div>
+		<div class="example-sidenav-content">
+			<p>MAINCONTENT</p>
 
-</mat-drawer-container>
+			<div style="overflow: hidden" [@openAnimation]="this.showText ? 'show' : 'hidden'">
+				ANIMATIONTEXT
+			</div>
+		</div>
 
-<button (click)="openSidenav()">TOOGLE SIDENAV</button>
-<button (click)="animate()">Animation text</button>
+	</mat-drawer-container>
+	<div>

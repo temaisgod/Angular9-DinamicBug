@@ -1,0 +1,13 @@
+.example-container{
+  width: 100%;
+  flex: 1 1 auto;
+}
+
+.client-main-container{
+  display: flex;
+  flex-flow: column;
+  height: 100%;
+}
+.example-container p{
+  margin: 16px;
+}
